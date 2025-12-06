@@ -267,18 +267,18 @@
 .sm-panel-item {
     position: relative;
     color: #000;
-    font-weight: 600;
-    font-size: 3.5rem;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
     cursor: pointer;
-    line-height: 1;
-    letter-spacing: -2px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
     transition:
         background 0.25s,
         color 0.25s;
     display: inline-block;
     text-decoration: none;
-    padding-right: 1.4em;
+    padding-right: 2.5em;
 }
 
 .staggered-menu-panel .sm-socials-list .sm-socials-link {
@@ -318,7 +318,7 @@
     content: counter(smItem, decimal-leading-zero);
     position: absolute;
     top: 0.1em;
-    right: 2.8em;
+    right: 0;
     font-size: 18px;
     font-weight: 400;
     color: var(--sm-accent, #5227ff);
@@ -335,9 +335,7 @@
         right: 0;
     }
 
-    .staggered-menu-wrapper[data-open] .sm-logo-img {
-        filter: invert(100%);
-    }
+    /* Logo inversion removed */
 }
 
 @media (max-width: 640px) {
@@ -347,7 +345,70 @@
         right: 0;
     }
 
-    .staggered-menu-wrapper[data-open] .sm-logo-img {
-        filter: invert(100%);
-    }
+    /* Logo inversion removed */
+}
+
+/* Embedded Menu Override */
+.staggered-menu-wrapper.embedded-menu {
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: auto;
+}
+
+.staggered-menu-wrapper.embedded-menu .staggered-menu-header {
+    position: relative;
+    padding: 0;
+    width: auto;
+    pointer-events: auto;
+    justify-content: flex-end;
+}
+
+.staggered-menu-wrapper.embedded-menu .staggered-menu-header .sm-logo {
+    display: none;
+}
+
+.staggered-menu-wrapper.embedded-menu .staggered-menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+.staggered-menu-wrapper.embedded-menu .sm-prelayers {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 90;
+}
+
+.sm-close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    color: #0f172a;
+    cursor: pointer;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease;
+}
+
+.sm-close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: rotate(90deg);
+    color: var(--sm-accent, #2563eb);
 }

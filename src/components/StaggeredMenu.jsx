@@ -1,6 +1,7 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
+import { X } from 'lucide-react';
 import './StaggeredMenu.css';
 
 const StaggeredMenu = ({
@@ -373,7 +374,7 @@ const StaggeredMenu = ({
             </div>
             <header className="staggered-menu-header" aria-label="Main navigation header">
                 <div className="sm-logo" aria-label="Logo">
-                    {/* Logo handling can be customized here if needed */}
+                    {logoUrl && <img src={logoUrl} alt="Logo" className="sm-logo-img" />}
                 </div>
                 <button
                     ref={toggleBtnRef}
@@ -401,6 +402,13 @@ const StaggeredMenu = ({
             </header>
 
             <aside id="staggered-menu-panel" ref={panelRef} className="staggered-menu-panel" aria-hidden={!open}>
+                <button
+                    className="sm-close-btn"
+                    onClick={closeMenu}
+                    aria-label="Close menu"
+                >
+                    <X size={24} />
+                </button>
                 <div className="sm-panel-inner">
                     <ul className="sm-panel-list" role="list" data-numbering={displayItemNumbering || undefined}>
                         {items && items.length ? (

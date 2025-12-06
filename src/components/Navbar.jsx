@@ -65,7 +65,7 @@ const Navbar = () => {
                         items={navLinks}
                         socialItems={socialItems}
                         displaySocials={true}
-                        displayItemNumbering={true}
+                        displayItemNumbering={false}
                         menuButtonColor="#0f172a" // slate-900
                         openMenuButtonColor="#0f172a" // slate-900
                         changeMenuColorOnOpen={false}
@@ -73,7 +73,8 @@ const Navbar = () => {
                         accentColor="#2563eb" // blue-600
                         logoUrl="/assets/logo.png"
                         onMenuClose={() => { }}
-                        isFixed={true} // Add this to let StaggeredMenu handle fixed positioning
+                        className="embedded-menu"
+                        isFixed={false} // Add this to let StaggeredMenu handle fixed positioning
                     />
                 </div>
             </div>
