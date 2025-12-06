@@ -6,14 +6,7 @@ import CircularGallery from '../components/CircularGallery';
 const Home = () => {
     return (
         <div className="relative overflow-hidden">
-            {/* Abstract Background Pattern */}
-            <div className="fixed inset-0 pointer-events-none z-[-1] bg-slate-50">
-                <img
-                    src="/assets/home_background_waves.png"
-                    alt="Background Pattern"
-                    className="w-full h-full object-cover opacity-30 animate-float-slow"
-                />
-            </div>
+
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 overflow-hidden">
                 {/* Background Grid */}

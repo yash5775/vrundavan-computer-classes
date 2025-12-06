@@ -9,7 +9,7 @@ const teamMembers = [
 
 const Team = () => {
     return (
-        <div className="bg-slate-50 min-h-screen py-12">
+        <div className="min-h-screen py-12">
             <div className="max-w-screen-xl mx-auto px-4">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold text-slate-900 mb-4">Meet Our Team</h1>

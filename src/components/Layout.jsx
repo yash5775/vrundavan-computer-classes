@@ -8,7 +8,15 @@ const Layout = ({ children }) => {
     const isHome = location.pathname === '/';
 
     return (
-        <div className="min-h-screen flex flex-col font-sans">
+        <div className="min-h-screen flex flex-col font-sans relative">
+            {/* Abstract Background Pattern - Global */}
+            <div className="fixed inset-0 pointer-events-none z-[-1] bg-slate-50">
+                <img
+                    src="/assets/home_background_waves.png"
+                    alt="Background Pattern"
+                    className="w-full h-full object-cover opacity-30 animate-float-slow"
+                />
+            </div>
             <Navbar />
             <main className={`flex-grow ${isHome ? '' : 'pt-24'}`}>
                 {children}
