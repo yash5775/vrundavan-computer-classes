@@ -30,7 +30,7 @@ const Navbar = () => {
         <nav className="fixed w-full z-50 top-0 start-0 border-b border-white/20 bg-white/10 backdrop-blur-md shadow-sm">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse z-50 relative" onClick={handleLinkClick}>
-                    <span className="self-center text-2xl font-bold whitespace-nowrap text-slate-900">SKILLNEST</span>
+                    <img src="/assets/logo.png" alt="SKILLNEST" className="h-12 w-auto object-contain drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]" />
                 </Link>
 
                 {/* Desktop Menu */}
@@ -72,7 +72,7 @@ const Navbar = () => {
                             changeMenuColorOnOpen={false}
                             colors={['#1e293b', '#0f172a']} // slate-800, slate-900
                             accentColor="#2563eb" // blue-600
-                            logoUrl="" // Hide logo in menu or provide one if available
+                            logoUrl="/assets/logo.png" // Hide logo in menu or provide one if available
                             onMenuClose={() => { }}
                         />
                     </div>

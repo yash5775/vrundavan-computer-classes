@@ -25,7 +25,7 @@ const Home = () => {
                             <span>🎓</span> Transforming Skills Into Success
                         </div>
                         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                            <span className="text-2xl md:text-4xl">THE</span> LEADING&nbsp;COMPUTER <br /> INSTITUTE IN KESHOD.
+                            <span className="text-2xl md:text-4xl text-yellow-300">THE</span> LEADING&nbsp;COMPUTER <br /> INSTITUTE IN KESHOD.
                         </h1>
                         <p className="text-lg text-blue-100 max-w-lg">
                             Join a new era of education where innovation meets knowledge. Discover expert-led courses, practical skills, and limitless opportunities to achieve your goals.
