@@ -437,13 +437,17 @@ const StaggeredMenu = ({
                         <div className="sm-socials" aria-label="Social links">
                             <h3 className="sm-socials-title">Socials</h3>
                             <ul className="sm-socials-list" role="list">
-                                {socialItems.map((s, i) => (
-                                    <li key={s.label + i} className="sm-socials-item">
-                                        <a href={s.link} target="_blank" rel="noopener noreferrer" className="sm-socials-link">
-                                            {s.label}
-                                        </a>
-                                    </li>
-                                ))}
+                                {socialItems.map((s, i) => {
+                                    const Icon = s.icon;
+                                    return (
+                                        <li key={s.label + i} className="sm-socials-item">
+                                            <a href={s.link} target="_blank" rel="noopener noreferrer" className="sm-socials-link">
+                                                {Icon && <Icon size={18} className="sm-social-icon" />}
+                                                <span>{s.label}</span>
+                                            </a>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     )}

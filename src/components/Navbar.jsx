@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Twitter, Instagram, Linkedin } from 'lucide-react';
 import StaggeredMenu from './StaggeredMenu';
 
 const Navbar = () => {
@@ -15,9 +16,9 @@ const Navbar = () => {
     ];
 
     const socialItems = [
-        { label: 'Twitter', link: 'https://twitter.com' },
-        { label: 'Instagram', link: 'https://instagram.com' },
-        { label: 'LinkedIn', link: 'https://linkedin.com' }
+        { label: 'Twitter', link: 'https://twitter.com', icon: Twitter },
+        { label: 'Instagram', link: 'https://instagram.com', icon: Instagram },
+        { label: 'LinkedIn', link: 'https://linkedin.com', icon: Linkedin }
     ];
 
     const isActive = (path) => location.pathname === path;
