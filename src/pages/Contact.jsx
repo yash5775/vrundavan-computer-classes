@@ -69,16 +69,32 @@ const ContactForm = () => {
     });
     const [status, setStatus] = React.useState('idle'); // idle, submitting, success, error
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('submitting');
 
-        // Simulate API call
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({ firstName: '', lastName: '', email: '', message: '' });
-            setTimeout(() => setStatus('idle'), 3000);
-        }, 1000);
+        try {
+            const response = await fetch("https://formspree.io/f/mvgeqyrp", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ firstName: '', lastName: '', email: '', message: '' });
+                setTimeout(() => setStatus('idle'), 5000);
+            } else {
+                setStatus('error');
+                setTimeout(() => setStatus('idle'), 5000);
+            }
+        } catch (error) {
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 5000);
+        }
     };
 
     const handleChange = (e) => {
@@ -144,6 +160,12 @@ const ContactForm = () => {
             {status === 'success' && (
                 <div className="p-4 bg-green-50 text-green-700 rounded-lg text-sm font-medium">
                     Message sent successfully! We'll get back to you soon.
+                </div>
+            )}
+
+            {status === 'error' && (
+                <div className="p-4 bg-red-50 text-red-700 rounded-lg text-sm font-medium">
+                    Oops! There was a problem sending your message. Please try again.
                 </div>
             )}
 
