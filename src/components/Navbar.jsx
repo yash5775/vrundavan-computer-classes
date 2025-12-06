@@ -60,22 +60,21 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu - StaggeredMenu */}
-                <div className="md:hidden absolute top-0 right-0 h-screen w-full pointer-events-none overflow-hidden">
-                    <div className="pointer-events-auto h-full w-full">
-                        <StaggeredMenu
-                            items={navLinks}
-                            socialItems={socialItems}
-                            displaySocials={true}
-                            displayItemNumbering={true}
-                            menuButtonColor="#0f172a" // slate-900
-                            openMenuButtonColor="#0f172a" // slate-900
-                            changeMenuColorOnOpen={false}
-                            colors={['#1e293b', '#0f172a']} // slate-800, slate-900
-                            accentColor="#2563eb" // blue-600
-                            logoUrl="/assets/logo.png" // Hide logo in menu or provide one if available
-                            onMenuClose={() => { }}
-                        />
-                    </div>
+                <div className="md:hidden">
+                    <StaggeredMenu
+                        items={navLinks}
+                        socialItems={socialItems}
+                        displaySocials={true}
+                        displayItemNumbering={true}
+                        menuButtonColor="#0f172a" // slate-900
+                        openMenuButtonColor="#0f172a" // slate-900
+                        changeMenuColorOnOpen={false}
+                        colors={['#1e293b', '#0f172a']} // slate-800, slate-900
+                        accentColor="#2563eb" // blue-600
+                        logoUrl="/assets/logo.png"
+                        onMenuClose={() => { }}
+                        isFixed={true} // Add this to let StaggeredMenu handle fixed positioning
+                    />
                 </div>
             </div>
         </nav>

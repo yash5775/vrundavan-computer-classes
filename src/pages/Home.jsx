@@ -137,7 +137,12 @@ const Home = () => {
                         </Link>
                     </div>
                     <div>
-                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80" alt="Management" className="rounded-2xl shadow-lg" />
+                        <img
+                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Management"
+                            className="rounded-2xl shadow-lg"
+                            loading="lazy"
+                        />
                     </div>
                 </section>
 
@@ -219,9 +224,10 @@ const Home = () => {
                             <div className="flex flex-col items-center md:items-start shrink-0">
                                 <div className="w-48 h-56 md:w-56 md:h-64 rounded-2xl border-4 border-white shadow-lg overflow-hidden mb-4 relative z-10 ring-1 ring-slate-100">
                                     <img
-                                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                                         alt="Director"
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div className="text-center md:text-center w-full">
@@ -288,7 +294,12 @@ const Home = () => {
                 {/* Team Preview */}
                 <section className="grid md:grid-cols-2 gap-12 items-center bg-white/90 rounded-3xl p-8 md:p-12 shadow-sm">
                     <div className="order-2 md:order-1">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" alt="Team" className="rounded-2xl shadow-lg" />
+                        <img
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Team"
+                            className="rounded-2xl shadow-lg"
+                            loading="lazy"
+                        />
                     </div>
                     <div className="order-1 md:order-2 space-y-6">
                         <div className="inline-block p-3 rounded-xl bg-green-100 text-green-600"><Users size={24} /></div>
