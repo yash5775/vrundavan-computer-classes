@@ -308,8 +308,10 @@ const Home = () => {
 
                 {/* Contact Preview */}
                 <section className="text-center space-y-8 bg-blue-50/60 backdrop-blur-sm rounded-3xl p-12">
-                    <div className="inline-block p-3 rounded-xl bg-blue-100 text-blue-600"><Phone size={24} /></div>
-                    <h2 className="text-3xl font-bold text-slate-900">Get in Touch</h2>
+                    <div className="flex items-center justify-center gap-3">
+                        <div className="p-3 rounded-xl bg-blue-100 text-blue-600"><Phone size={24} /></div>
+                        <h2 className="text-3xl font-bold text-slate-900">Get in Touch</h2>
+                    </div>
                     <p className="text-slate-600 max-w-2xl mx-auto">
                         Have questions? We're here to help! Reach out to us for admissions, course details, or any other inquiries.
                     </p>
