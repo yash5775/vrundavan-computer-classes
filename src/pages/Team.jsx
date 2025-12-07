@@ -16,14 +16,14 @@ const Team = () => {
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">Our dedicated faculty members are passionate about teaching and helping students succeed.</p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
                     {teamMembers.map((member) => (
                         <div key={member.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-100">
-                            <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
-                            <div className="p-6 text-center">
-                                <h3 className="text-lg font-bold text-slate-900">{member.name}</h3>
-                                <p className="text-blue-600 text-sm font-medium">{member.role}</p>
-                                <p className="text-slate-500 text-sm mt-2">{member.subject}</p>
+                            <img src={member.image} alt={member.name} className="w-full h-40 md:h-64 object-cover" />
+                            <div className="p-3 md:p-6 text-center">
+                                <h3 className="text-sm md:text-lg font-bold text-slate-900">{member.name}</h3>
+                                <p className="text-blue-600 text-xs md:text-sm font-medium">{member.role}</p>
+                                <p className="text-slate-500 text-[10px] md:text-sm mt-1 md:mt-2">{member.subject}</p>
                             </div>
                         </div>
                     ))}

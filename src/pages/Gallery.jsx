@@ -44,10 +44,10 @@ const Gallery = () => {
     };
 
     return (
-        <div className="min-h-screen py-12">
+        <div className="min-h-screen py-6 md:py-12">
             <div className="max-w-screen-xl mx-auto px-4">
                 {/* Header */}
-                <div className="text-center mb-12 space-y-4">
+                <div className="text-center mb-8 md:mb-12 space-y-4">
                     <h1 className="text-3xl md:text-4xl font-bold text-slate-900">Campus Gallery</h1>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                         A visual journey through our campus, vibrant events, and student life. Experience the spirit of SkillNest.
@@ -55,7 +55,7 @@ const Gallery = () => {
                 </div>
 
                 {/* Filters */}
-                <div className="flex flex-wrap justify-center gap-3 mb-12">
+                <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-12">
                     {categories.map((cat) => (
                         <button
                             key={cat}
@@ -71,7 +71,7 @@ const Gallery = () => {
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
                     {filteredImages.map((image) => (
                         <div
                             key={image.id}
@@ -109,10 +109,10 @@ const Gallery = () => {
                         </button>
 
                         <button
-                            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors hover:bg-white/10 rounded-full hidden md:block"
+                            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors bg-black/20 hover:bg-black/40 rounded-full backdrop-blur-sm z-10"
                             onClick={handlePrev}
                         >
-                            <ChevronLeft size={48} />
+                            <ChevronLeft size={32} className="md:w-12 md:h-12" />
                         </button>
 
                         <div className="relative max-w-5xl max-h-[85vh] w-full" onClick={e => e.stopPropagation()}>
@@ -128,10 +128,10 @@ const Gallery = () => {
                         </div>
 
                         <button
-                            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-white/50 hover:text-white transition-colors hover:bg-white/10 rounded-full hidden md:block"
+                            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors bg-black/20 hover:bg-black/40 rounded-full backdrop-blur-sm z-10"
                             onClick={handleNext}
                         >
-                            <ChevronRight size={48} />
+                            <ChevronRight size={32} className="md:w-12 md:h-12" />
                         </button>
                     </div>
                 )}

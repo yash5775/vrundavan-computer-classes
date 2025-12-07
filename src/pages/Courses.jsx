@@ -18,15 +18,15 @@ const Courses = () => {
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">Explore our diverse range of courses designed to empower you with the skills needed for today's competitive world.</p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
                     {courses.map((course) => (
                         <div key={course.id} className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-slate-100">
-                            <img src={course.image} alt={course.title} className="w-full h-48 object-cover" />
-                            <div className="p-6">
-                                <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">{course.category}</span>
-                                <h3 className="text-xl font-bold text-slate-900 mt-3 mb-2">{course.title}</h3>
-                                <p className="text-slate-600 text-sm mb-4">{course.description}</p>
-                                <button className="w-full py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 font-medium transition-colors">
+                            <img src={course.image} alt={course.title} className="w-full h-32 md:h-48 object-cover" />
+                            <div className="p-4 md:p-6">
+                                <span className="text-[10px] md:text-xs font-semibold text-blue-600 bg-blue-50 px-2 md:px-3 py-1 rounded-full">{course.category}</span>
+                                <h3 className="text-sm md:text-xl font-bold text-slate-900 mt-2 md:mt-3 mb-1 md:mb-2 line-clamp-2 md:line-clamp-none leading-tight">{course.title}</h3>
+                                <p className="text-slate-600 text-xs md:text-sm mb-3 md:mb-4 line-clamp-2 md:line-clamp-none">{course.description}</p>
+                                <button className="w-full py-1.5 md:py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 text-xs md:text-base font-medium transition-colors">
                                     Learn More
                                 </button>
                             </div>
