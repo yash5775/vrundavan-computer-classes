@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Twitter, Instagram, Linkedin } from 'lucide-react';
-import StaggeredMenu from './StaggeredMenu';
+import { Twitter, Instagram, Linkedin, Menu, Facebook, Youtube, MessageCircle } from 'lucide-react';
+import MobileMenu from './MobileMenu';
+
 
 const Navbar = () => {
     const location = useLocation();
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navLinks = [
         { label: 'Home', link: '/', ariaLabel: 'Go to home page' },
@@ -16,9 +18,11 @@ const Navbar = () => {
     ];
 
     const socialItems = [
-        { label: 'Twitter', link: 'https://twitter.com', icon: Twitter },
-        { label: 'Instagram', link: 'https://instagram.com', icon: Instagram },
-        { label: 'LinkedIn', link: 'https://linkedin.com', icon: Linkedin }
+        { label: 'WhatsApp', link: 'https://whatsapp.com', icon: MessageCircle },
+        { label: 'Facebook', link: 'https://facebook.com', icon: Facebook },
+        { label: 'LinkedIn', link: 'https://linkedin.com', icon: Linkedin },
+        { label: 'YouTube', link: 'https://youtube.com', icon: Youtube },
+        { label: 'Instagram', link: 'https://instagram.com', icon: Instagram }
     ];
 
     const isActive = (path) => location.pathname === path;
@@ -60,24 +64,26 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                {/* Mobile Menu - StaggeredMenu */}
-                <div className="md:hidden">
-                    <StaggeredMenu
-                        items={navLinks}
-                        socialItems={socialItems}
-                        displaySocials={true}
-                        displayItemNumbering={false}
-                        menuButtonColor="#0f172a" // slate-900
-                        openMenuButtonColor="#0f172a" // slate-900
-                        changeMenuColorOnOpen={false}
-                        colors={['#1e293b', '#0f172a']} // slate-800, slate-900
-                        accentColor="#2563eb" // blue-600
-                        logoUrl="/assets/logo.png"
-                        onMenuClose={() => { }}
-                        className="embedded-menu"
-                        isFixed={false} // Add this to let StaggeredMenu handle fixed positioning
-                    />
+
+                {/* Mobile Menu Toggle Button */}
+                <div className="md:hidden flex items-center">
+                    <button
+                        onClick={() => setIsMobileMenuOpen(true)}
+                        className="text-slate-800 p-2 focus:outline-none"
+                        aria-label="Open menu"
+                    >
+                        <Menu size={28} />
+                    </button>
                 </div>
+
+                {/* Mobile Menu Component */}
+                <MobileMenu
+                    isOpen={isMobileMenuOpen}
+                    onClose={() => setIsMobileMenuOpen(false)}
+                    items={navLinks}
+                    socialItems={socialItems}
+                />
+
             </div>
         </nav>
     );
