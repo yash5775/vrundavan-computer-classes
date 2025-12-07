@@ -8,7 +8,7 @@ const Home = () => {
         <div className="relative overflow-hidden">
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 overflow-hidden">
+            <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 overflow-hidden">
                 {/* Background Grid */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
 
@@ -17,8 +17,8 @@ const Home = () => {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium">
                             <span>🎓</span> Transforming Skills Into Success
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                            <span className="text-2xl md:text-4xl text-yellow-300">THE</span> LEADING&nbsp;COMPUTER <br /> INSTITUTE IN KESHOD.
+                        <h1 className="text-3xl md:text-6xl font-bold leading-tight">
+                            <span className="text-xl md:text-4xl text-yellow-300">THE</span> LEADING&nbsp;COMPUTER <br /> INSTITUTE IN KESHOD.
                         </h1>
                         <p className="text-lg text-blue-100 max-w-lg">
                             Join a new era of education where innovation meets knowledge. Discover expert-led courses, practical skills, and limitless opportunities to achieve your goals.
@@ -140,7 +140,7 @@ const Home = () => {
                 </section>
 
                 {/* Stats Section */}
-                <section className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4 animate-fade-in-up">
+                <section className="grid grid-cols-2 md:grid-cols-4 gap-4 gap-y-8 py-4 animate-fade-in-up">
                     <div className="text-center space-y-2 md:border-r md:border-blue-900">
                         <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600 mb-1 shadow-sm">
                             <Clock size={20} />
