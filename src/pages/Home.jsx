@@ -269,7 +269,7 @@ const Home = () => {
                     <p className="text-slate-300 max-w-2xl mx-auto">
                         Take a glimpse into the vibrant life at SkillNest. Our gallery showcases events, classrooms, and student activities.
                     </p>
-                    <div style={{ height: '400px', position: 'relative', marginTop: '-30px', marginBottom: '-50px' }}>
+                    <div style={{ height: '350px', position: 'relative', marginTop: '-30px', marginBottom: '-80px' }}>
                         <CircularGallery
                             bend={0.5}
                             textColor="#ffffff"
