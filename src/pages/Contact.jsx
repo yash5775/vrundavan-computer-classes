@@ -32,11 +32,11 @@ const Contact = () => {
     ];
 
     return (
-        <div className="min-h-screen py-16">
+        <div className="min-h-screen py-12">
             <div className="max-w-screen-xl mx-auto px-4">
                 {/* Header */}
-                <div className="text-center mb-16 space-y-4">
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900">Get in Touch</h1>
+                <div className="text-center mb-12 space-y-4">
+                    <h1 className="text-3xl md:text-4xl font-bold text-slate-900">Get in Touch</h1>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                         We have three convenient centers to serve you. Visit the one nearest to you or send us a message online.
                     </p>

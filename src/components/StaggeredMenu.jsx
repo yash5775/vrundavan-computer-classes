@@ -1,7 +1,7 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
-import { X } from 'lucide-react';
+import { X, Menu } from 'lucide-react';
 import './StaggeredMenu.css';
 
 const StaggeredMenu = ({
@@ -273,31 +273,7 @@ const StaggeredMenu = ({
     }, [changeMenuColorOnOpen, menuButtonColor, openMenuButtonColor]);
 
     const animateText = useCallback(opening => {
-        const inner = textInnerRef.current;
-        if (!inner) return;
-        textCycleAnimRef.current?.kill();
-
-        const currentLabel = opening ? 'Menu' : 'Close';
-        const targetLabel = opening ? 'Close' : 'Menu';
-        const cycles = 3;
-        const seq = [currentLabel];
-        let last = currentLabel;
-        for (let i = 0; i < cycles; i++) {
-            last = last === 'Menu' ? 'Close' : 'Menu';
-            seq.push(last);
-        }
-        if (last !== targetLabel) seq.push(targetLabel);
-        seq.push(targetLabel);
-        setTextLines(seq);
-
-        gsap.set(inner, { yPercent: 0 });
-        const lineCount = seq.length;
-        const finalShift = ((lineCount - 1) / lineCount) * 100;
-        textCycleAnimRef.current = gsap.to(inner, {
-            yPercent: -finalShift,
-            duration: 0.5 + lineCount * 0.07,
-            ease: 'power4.out'
-        });
+        // Text animation removed
     }, []);
 
     const toggleMenu = useCallback(() => {
@@ -385,19 +361,7 @@ const StaggeredMenu = ({
                     onClick={toggleMenu}
                     type="button"
                 >
-                    <span ref={textWrapRef} className="sm-toggle-textWrap" aria-hidden="true">
-                        <span ref={textInnerRef} className="sm-toggle-textInner">
-                            {textLines.map((l, i) => (
-                                <span className="sm-toggle-line" key={i}>
-                                    {l}
-                                </span>
-                            ))}
-                        </span>
-                    </span>
-                    <span ref={iconRef} className="sm-icon" aria-hidden="true">
-                        <span ref={plusHRef} className="sm-icon-line" />
-                        <span ref={plusVRef} className="sm-icon-line sm-icon-line-v" />
-                    </span>
+                    <Menu className="sm-toggle-icon" size={28} />
                 </button>
             </header>
 

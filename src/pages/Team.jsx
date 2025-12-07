@@ -11,9 +11,9 @@ const Team = () => {
     return (
         <div className="min-h-screen py-12">
             <div className="max-w-screen-xl mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-slate-900 mb-4">Meet Our Team</h1>
-                    <p className="text-slate-600 max-w-2xl mx-auto">Our dedicated faculty members are passionate about teaching and helping students succeed.</p>
+                <div className="text-center mb-12 space-y-4">
+                    <h1 className="text-3xl md:text-4xl font-bold text-slate-900">Meet Our Team</h1>
+                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">Our dedicated faculty members are passionate about teaching and helping students succeed.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

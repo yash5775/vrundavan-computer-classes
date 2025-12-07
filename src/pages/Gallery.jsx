@@ -44,11 +44,11 @@ const Gallery = () => {
     };
 
     return (
-        <div className="min-h-screen py-16">
+        <div className="min-h-screen py-12">
             <div className="max-w-screen-xl mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-12 space-y-4">
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900">Campus Gallery</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold text-slate-900">Campus Gallery</h1>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                         A visual journey through our campus, vibrant events, and student life. Experience the spirit of SkillNest.
                     </p>
@@ -61,8 +61,8 @@ const Gallery = () => {
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === cat
-                                    ? 'bg-blue-600 text-white shadow-lg scale-105'
-                                    : 'bg-white text-slate-600 hover:bg-slate-100 hover:text-blue-600 shadow-sm'
+                                ? 'bg-blue-600 text-white shadow-lg scale-105'
+                                : 'bg-white text-slate-600 hover:bg-slate-100 hover:text-blue-600 shadow-sm'
                                 }`}
                         >
                             {cat}

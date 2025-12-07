@@ -10,9 +10,9 @@ const Management = () => {
     return (
         <div className="min-h-screen py-12">
             <div className="max-w-screen-xl mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-slate-900 mb-4">Our Management</h1>
-                    <p className="text-slate-600 max-w-2xl mx-auto">Meet the visionaries who guide our institution towards excellence.</p>
+                <div className="text-center mb-12 space-y-4">
+                    <h1 className="text-3xl md:text-4xl font-bold text-slate-900">Our Management</h1>
+                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">Meet the visionaries who guide our institution towards excellence.</p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
