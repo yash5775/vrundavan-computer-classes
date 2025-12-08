@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, ZoomIn, ChevronLeft, ChevronRight, Filter } from 'lucide-react';
 
 const galleryData = [
@@ -21,6 +21,17 @@ const categories = ['All', 'Campus', 'Students', 'Events'];
 const Gallery = () => {
     const [activeCategory, setActiveCategory] = useState('All');
     const [selectedImage, setSelectedImage] = useState(null);
+
+    useEffect(() => {
+        if (selectedImage) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [selectedImage]);
 
     const filteredImages = activeCategory === 'All'
         ? galleryData
